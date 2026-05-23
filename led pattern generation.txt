@@ -1,0 +1,28 @@
+led pattern generation
+
+Algorithm :
+
+Step1: Start.
+Step 2: Initialize (EDRin.
+Step 3: Setup Configuration.
+Step 4: Pregin infinite loop.
+Step 5: Turn on LED.
+Step 6: Wait for 0.5 sec.
+Step 7: Turn off LED.
+Step 8: Wait for 0.5 sec.
+Step 9: Repeat steps 5-8 continuously
+Step 10: END
+
+Code :
+
+External LED with specific pin
+const int ledPin = 6; //LED connected to digital pin6
+void setup(){
+pin mode (led pin, OUTPUT); 1,OUTPUT); // Set pin6 as output
+}
+void loop(){
+digital write (ledpin, HIGH); // Turn LED on 
+delay(500); //on Delay 0.5 seconds) 
+digital write (ledpin, low); // Turn LED off 
+delay (500); // off delay (0.5 seconds)
+}

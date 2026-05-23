@@ -1,0 +1,34 @@
+interface bluetooth module hc05 to control led 
+
+Algorithm :
+ 
+Step 1: Start.
+Step 2: Initialize serial communication/bluetooth Arduino.
+Step 3: Set LED pin as output.
+Step 4: Wait for data from bluetooth.
+Step 5: If data received.
+If in put. '1' Tum LED ON
+If in put = '0' Turn LED OF
+Step 6: Repeat Continuously.
+Step 7: END.
+
+Code :
+
+char data;
+int led Pin=13;
+void setup(){
+serial.begin (9000);
+pinMode (Red Pin, OUTPUT);
+void loop()
+{
+If (serial.available ()70)
+{
+data = serial.read();
+If (data = '1')
+{
+digital write (ledPin, HIGH);
+}
+else if (data = '0')
+{
+digital Write (led Pin, low):
+}}}

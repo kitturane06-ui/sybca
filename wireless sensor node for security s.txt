@@ -1,0 +1,35 @@
+wireless sensor node for security system
+
+Algorithm :
+
+Step1 - Start & Initialize.
+Step 2-Read sensor value.
+Step 3 - Check motion detection.
+Step 4 - Motion detected action.
+Step 5-Motion No Action.
+Step 6 - Repeat continuously.
+Step 7 - END.
+
+Code :
+
+int pirpin = 2; // PIR sensor output
+pin
+int ledPin = 13; // LED Pin
+int val = 0; // Variable for reading the
+pin status
+void setup(){
+pinMode(ledPin, OUTPUT);
+pinMode(pirPin, INPUT); 
+Serial.begin (9600);
+}
+void loop(){
+val = digitalRead (pirpin); // Read sensor 
+if (val = = HIGH) { // If motion detected
+digitalWrite(ledPin, (ledPin, HIGH);
+Serial.printin (Motion detected!");
+}else{
+digitalWrite (ledPin, LOW);
+Serial.printin ("Motion ended!");
+}
+delay(100); // Small delay to stabilize
+} 

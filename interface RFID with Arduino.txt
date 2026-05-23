@@ -1,0 +1,67 @@
+interface RFID with Arduino
+
+Algorithm :
+
+Step1: Start.
+Step 2: Include library.
+Step 3: Define Pins.
+Step 4: Initialize RFID Module.
+Step 5: Set Authorized VID.
+Step 6: Setup function.
+Step 7: Loop function starts.
+Step 8: Check for RFID card
+Step 9: Display VID.
+Step 10: Display VID.
+Step 11: Else
+Step 12: Repeat/loop.
+Step 13: END.
+
+Code :
+
+#include <SPI.h>
+#include <MERC522.h>
+#define RST-PIN 9
+#define LED-GREN 4
+#define 55.PIN-10
+#define LED-RED.5
+#MERC 522 MFFC 522 (SS-PIN,
+RST-PIN);
+String authorizal USD = "A3B2 (104";)
+void setup()
+{
+serial.begin(9600);
+SP3.Degin();
+mfrc S22.PC O_Init();
+Pin model (LED-GREEN, Output);
+Pin model (LED-RED, output');
+serial. print Inl "scan card to check
+accers );
+}
+void loop()
+{
+mfrc 522. I522 - Is New card present ()
+return;
+IFC!mfrc 522. PICC-Read(and Serial())
+return
+string content="";
+for ibyte; = 0; i<mfrc 522. uid.size; 1+1
+{
+content.concat (string (mfre 522. vid.vid
+Byte [i] <ox 10? "0":");
+content.concat (string (mfrc 522. vid.vid
+Byte [i], }
+content to upper case (); 
+string tag UID = untent. substring()
+serial print IN (UID: "+tagUID)
+{
+digital write (LED-Green, low);
+delay (2000);
+digifal write (LED-GREEN, LOW);
+}
+else
+{
+Serial.print In ("Act as Denied!");
+digital write (LED-RED. RED, High);
+delay (2000);
+digital Write (LED-RED, low);
+}}
